@@ -8,3 +8,19 @@ export function zeroPad(i) {
   }
   return i;
 }
+
+/**
+* Convert Celsius to Fahrenheit
+* @param {object} data - WeatherData -
+*/
+export function toFahrenheit(data) {
+  
+  if (data.unit.toLowerCase() === "celsius") {
+     data.temperature =  Math.round((data.temperature * 1.8)+32);
+     data.unit = "Fahrenheit";
+  }
+  
+  return data
+}
+
+
