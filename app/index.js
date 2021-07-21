@@ -2,6 +2,7 @@ import document from "document";
 
 import * as clock from "./clock";
 import * as newfile from "./newfile";
+import { tempCFConv } from "../common/utils";
 
 const time = document.getElementById("time");
 const details = document.getElementById("details");
