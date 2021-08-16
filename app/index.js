@@ -13,6 +13,6 @@ clock.initialize("minutes", data => {
 
 newfile.initialize(data => {
   // fresh weather file received
-  details.text = `It's ${data.temperature}\u00B0 ${data.unit} and ${data.condition} in ${data.location}`;
+  details.text = `It's ${data.temperature}\u00B0 ${data.unit} and ${data.condition} (${data.conditionCode}) in ${data.location}`;
   clock.tick();
 });

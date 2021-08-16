@@ -8,3 +8,14 @@ export function zeroPad(i) {
   }
   return i;
 }
+
+/**
+ * Find the friendly name for a weather conditionCode.
+ * @param {*} conditionCode 
+ * @returns 
+ */
+export function findWeatherConditionName(WeatherCondition, conditionCode) {
+  for (const condition of Object.keys(WeatherCondition)) {
+    if (conditionCode === WeatherCondition[condition]) return condition;
+  }
+}
