@@ -4,7 +4,7 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
-    "@fitbit/sdk": "6.0.0",
+    "@fitbit/sdk": "~6.0.0",
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
@@ -13,7 +13,10 @@
     "appDisplayName": "SDK Weather Clock",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
-    "requestedPermissions": ["access_location", "run_background"],
+    "requestedPermissions": [
+      "access_location",
+      "run_background"
+    ],
     "buildTargets": [
       "atlas",
       "vulcan"

@@ -17,9 +17,10 @@ newfile.initialize(data => {
   // fresh weather file received
 
   // If the user-settings temperature == F and the result data.unit == Celsius then we convert to Fahrenheit
-  // Use only if the getWeatherData() function you use without optional parameter.
+  // Use this only if you use getWeatherData() function without the optional parameter.
   data = units.temperature === "F" ? toFahrenheit(data): data;
 
-  details.text = `It's ${data.temperature}\u00B0 ${data.unit} and ${data.condition} in ${data.location}`;
+  details.text = `It's ${data.temperature}\u00B0 ${data.unit} and ${data.condition} (${data.conditionCode}) in ${data.location}`;
+
   clock.tick();
 });
