@@ -19,3 +19,16 @@ export function findWeatherConditionName(WeatherCondition, conditionCode) {
     if (conditionCode === WeatherCondition[condition]) return condition;
   }
 }
+
+/**
+* Convert Celsius to Fahrenheit
+* @param {object} data - WeatherData -
+*/
+export function toFahrenheit(data) {
+  if (data.unit.toLowerCase() === "celsius") {
+     data.temperature =  Math.round((data.temperature * 1.8)+32);
+     data.unit = "Fahrenheit";
+  }
+  
+  return data
+}
